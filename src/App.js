@@ -2,10 +2,8 @@ import React, { useState, useRef } from 'react';
 import { itinerary } from './data';
 import './App.css';
 
-function MusicPlayer() {
+function MusicPlayer({ audioRef }) {
   const [playing, setPlaying] = useState(false);
-  const [started, setStarted] = useState(false);
-  const audioRef = useRef(null);
 
   const toggle = () => {
     const audio = audioRef.current;
@@ -15,20 +13,20 @@ function MusicPlayer() {
       setPlaying(false);
     } else {
       audio.play().then(() => setPlaying(true)).catch(() => {});
-      setStarted(true);
     }
   };
 
+  // expose setPlaying so App can update button state when music starts externally
+  audioRef._setPlaying = setPlaying;
+
   return (
-    <div className="music-player" title={playing ? 'Pause music' : 'Play devotional music'}>
-      <audio ref={audioRef} src="assets/music/bgm.mp3" loop preload="none" />
+    <div className="music-player">
+      <audio ref={audioRef} src="assets/music/bgm.mp3" loop preload="auto" />
       <button className="music-btn" onClick={toggle}>
-        {!started ? (
-          <><span className="music-icon">🎵</span><span className="music-label">Play Music</span></>
-        ) : playing ? (
+        {playing ? (
           <><span className="music-icon">⏸</span><span className="music-label">Pause</span></>
         ) : (
-          <><span className="music-icon">▶️</span><span className="music-label">Play</span></>
+          <><span className="music-icon">🎵</span><span className="music-label">Play Music</span></>
         )}
       </button>
       {playing && (
@@ -198,15 +196,20 @@ function DocumentList({ documents }) {
   );
 }
 
-function DayCard({ day, isActive, onClick }) {
+function DayCard({ day, isActive, onClick, startMusic }) {
+  const handleClick = () => {
+    startMusic();
+    onClick();
+  };
+
   return (
     <div
       className={`day-card ${isActive ? 'active' : ''}`}
       style={{ '--accent': day.accentColor, '--day-color': day.color }}
-      onClick={onClick}
+      onClick={handleClick}
       role="button"
       tabIndex={0}
-      onKeyDown={e => e.key === 'Enter' && onClick()}
+      onKeyDown={e => e.key === 'Enter' && handleClick()}
     >
       <div className="day-card-header">
         <div className="day-badge">
@@ -254,11 +257,21 @@ function ImportantNotes() {
 
 export default function App() {
   const [activeDay, setActiveDay] = useState(null);
+  const audioRef = useRef(null);
+
   const toggle = (id) => setActiveDay(prev => prev === id ? null : id);
+
+  const startMusic = () => {
+    const audio = audioRef.current;
+    if (!audio || !audio.paused) return; // already playing, do nothing
+    audio.play().then(() => {
+      if (audioRef._setPlaying) audioRef._setPlaying(true);
+    }).catch(() => {});
+  };
 
   return (
     <div className="app">
-      <MusicPlayer />
+      <MusicPlayer audioRef={audioRef} />
       <Header />
       <main className="main">
         <div className="days-container">
@@ -268,6 +281,7 @@ export default function App() {
               day={day}
               isActive={activeDay === day.id}
               onClick={() => toggle(day.id)}
+              startMusic={startMusic}
             />
           ))}
         </div>
