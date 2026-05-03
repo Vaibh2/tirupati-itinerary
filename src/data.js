@@ -13,8 +13,28 @@ export const itinerary = [
         time: "20:05",
         label: "Departure",
         detail: "Venkatadri Express from Kacheguda (12797)",
+        mapLink: "https://www.google.com/maps/search/?api=1&query=Kacheguda+Railway+Station",
         icon: "🚉"
       }
+    ],
+    passengertable: [
+      { name: "Jawalkar Krishna", age: 50, gender: "M", seat: "B4-41 LOWER", status: "CNF" },
+      { name: "Jawalkar Ranjitha", age: 43, gender: "F", seat: "B4-44 LOWER", status: "CNF" },
+      { name: "JS Anitha", age: 53, gender: "F", seat: "B4-45 MIDDLE", status: "CNF" },
+      { name: "Vaibhav L Jawalkar", age: 20, gender: "M", seat: "B4-43 UPPER", status: "CNF" },
+      { name: "Pranav J Jawalkar", age: 16, gender: "M", seat: "B4-46 UPPER", status: "CNF" },
+
+      { name: "Dubba Kalpana", age: 47, gender: "F", seat: "B4-49 LOWER", status: "CNF" },
+      { name: "Aparna Jawalkar", age: 51, gender: "F", seat: "B4-50 MIDDLE", status: "CNF" },
+      { name: "JS Preeti", age: 28, gender: "F", seat: "B4-51 UPPER", status: "CNF" },
+      { name: "Dubba Shiva", age: 30, gender: "M", seat: "B4-52 LOWER", status: "CNF" },
+      { name: "Jaganath Jawalkar", age: 52, gender: "M", seat: "B4-53 MIDDLE", status: "CNF" },
+      { name: "Jatin Dounde", age: 19, gender: "M", seat: "B4-54 UPPER", status: "CNF" },
+
+      { name: "Bhavani Shankar", age: 54, gender: "M", seat: "B4-57 LOWER", status: "CNF" },
+      { name: "Kavita Dounde", age: 49, gender: "F", seat: "B4-60 LOWER", status: "CNF" },
+      { name: "Jyotsna Dounde", age: 26, gender: "F", seat: "B4-58 MIDDLE", status: "CNF" },
+      { name: "Mahenderkar Pavan", age: 30, gender: "M", seat: "B4-61 MIDDLE", status: "CNF" },
     ],
     documents: [
       { label: "Train Ticket 1", path: "assets/trains/ticket1.pdf", icon: "🎫" },
@@ -108,6 +128,25 @@ export const itinerary = [
     events: [
       { time: "10:00 AM", label: "Padmavathi Temple Darshan", detail: "Sri Padmavathi Ammavari Temple, Tiruchanur", icon: "🛕" },
       { time: "18:45", label: "Return Train", detail: "Tirupati → Kacheguda (12798)", icon: "🚆" }
+    ],
+    passengertable: [
+      { name: "Jawalkar Krishna", age: 50, gender: "M", seat: "B3-25 LOWER", status: "CNF" },
+      { name: "Jawalkar Ranjitha", age: 43, gender: "F", seat: "B3-28 LOWER", status: "CNF" },
+      { name: "JS Anitha", age: 53, gender: "F", seat: "B3-29 MIDDLE", status: "CNF" },
+      { name: "Vaibhav L Jawalkar", age: 20, gender: "M", seat: "B3-27 UPPER", status: "CNF" },
+      { name: "Pranav J Jawalkar", age: 16, gender: "M", seat: "B3-30 UPPER", status: "CNF" },
+
+      { name: "Dubba Kalpana", age: 47, gender: "F", seat: "B2-25 LOWER", status: "CNF" },
+      { name: "Aparna Jawalkar", age: 51, gender: "F", seat: "B2-28 LOWER", status: "CNF" },
+      { name: "JS Preeti", age: 28, gender: "F", seat: "B2-26 MIDDLE", status: "CNF" },
+      { name: "Dubba Shiva", age: 30, gender: "M", seat: "B2-29 MIDDLE", status: "CNF" },
+      { name: "Jaganath Jawalkar", age: 52, gender: "M", seat: "B2-27 UPPER", status: "CNF" },
+      { name: "Jatin Dounde", age: 19, gender: "M", seat: "B2-30 UPPER", status: "CNF" },
+
+      { name: "Bhavani Shankar", age: 54, gender: "M", seat: "B4-41 LOWER", status: "CNF" },
+      { name: "Kavita Dounde", age: 49, gender: "F", seat: "B4-44 LOWER", status: "CNF" },
+      { name: "Jyotsna Dounde", age: 26, gender: "F", seat: "B4-42 MIDDLE", status: "CNF" },
+      { name: "Mahenderkar Pavan", age: 30, gender: "M", seat: "B4-45 MIDDLE", status: "CNF" },
     ],
     documents: [
       { label: "Padmavathi — Lakshmikanth, Ranjitha, Anita, Vaibhav, Pranav, Amit", path: "assets/padmavati/pad1.pdf", icon: "🎟️" },

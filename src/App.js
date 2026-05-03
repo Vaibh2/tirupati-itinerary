@@ -37,7 +37,19 @@ function EventTimeline({ events }) {
           <div className="timeline-content">
             <span className="timeline-time">{ev.time}</span>
             <p className="timeline-label">{ev.label}</p>
-            <p className="timeline-detail">{ev.detail}</p>
+            <p className="timeline-detail">
+              {ev.detail}
+              {ev.mapLink && (
+                <a
+                  href={ev.mapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="map-link"
+                >
+                  📍 View Map
+                </a>
+              )}
+            </p>
           </div>
         </div>
       ))}
@@ -73,7 +85,45 @@ function DarshanTable({ rows, title }) {
     </div>
   );
 }
+function PassengerTable({ rows }) {
+  if (!rows || !rows.length) return null;
 
+  return (
+    <div className="darshan-table-wrap">
+      <p className="doc-heading">🚆 Train Passenger Details</p>
+
+      <table className="darshan-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Seat</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {rows.map((p, i) => (
+            <tr key={i} className={i % 2 === 0 ? 'even' : 'odd'}>
+              <td>{i + 1}</td>
+              <td>{p.name}</td>
+              <td>{p.age}</td>
+              <td>{p.gender}</td>
+              <td>{p.seat}</td>
+              <td>
+                <span className={p.status === "CNF" ? "status-green" : "status-red"}>
+                  {p.status}
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 function DocumentList({ documents }) {
   if (!documents.length) return null;
   return (
@@ -122,6 +172,7 @@ function DayCard({ day, isActive, onClick }) {
         <EventTimeline events={day.events} />
         <DarshanTable rows={day.darshantable} title="Darshan Timings — 06 May 2026" />
         <DarshanTable rows={day.kalyanamtable} title="Kalyanotsavam Timings — 07 May 2026" />
+        <PassengerTable rows={day.passengertable} />
         <DocumentList documents={day.documents} />
       </div>
 
