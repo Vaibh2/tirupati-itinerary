@@ -240,7 +240,7 @@ function DayCard({ day, isActive, onClick, startMusic }) {
 function ImportantNotes() {
   return (
     <div className="important-notes">
-      <h2>⚠️ Important Notes</h2>
+      <h2>⚠️ Important Notes - Things to Carry</h2>
       <ul>
         <li>Original Aadhaar Card with Xerox Copy Also</li>
         <li>2 Pearl pet Empty Bottle per Family - To fill and drink Water</li>
@@ -250,6 +250,7 @@ function ImportantNotes() {
         <li>Face Wet wipes / Phone chargers with Recharge / Sunglasses and Cap to Avoid Sunlight/Heat</li>
         <li>Thick Carry Bags for Carrying Laddus/Shopping Materials Like Bangles/Torans Etc</li>
         <li>Pls do Not forget your Medicines and take it on time</li>
+        <li>Happy Journey To all - Govinda Govindaa!</li>
       </ul>
     </div>
   );

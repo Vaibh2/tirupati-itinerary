@@ -76,7 +76,7 @@ export const itinerary = [
       "Jaganath/Aparna Vaini /Sanju Bhowji/Kavita/Pavan Ji/Jyotsna/Kalpana Akka Have Bath/Break fast and get ready by 11.15 and proceed immediate to ATC Circle for Special Darshan Reach by 11.40 am and have darshan and come back to room approx by 5 PM.",
       "At Evening Lakshmikanth/Ranjitha/Gaurav/Vaibhav/Pranav/Jatin will procedd and reach to ATC Circle by 6 pm to have Special Darshan. ",
       "All Other Members who do not have Darshan on 6th May can take rest Relax or Vist nearby Temple Spots like Varaha Swamy Temple/ Sri Vari Padalu/Akash Ganga/ Paap Vinashanam/Shila Thoranam/Japali Theertham . ",
-      "Note : Lunch/Dinner Pls have as per your Convenient time available with you since Darshan Timings are not the same all members and everyone of us will not be available for Lunch and Dinner"
+      "Note : Lunch/Dinner Pls have as per your Convenient time available with you since Darshan Timings are not the same all members and everyone of us together will not be available for Lunch and Dinner"
     ],
     documents: [
       { label: "Room 1 Booking", path: "assets/rooms/room1.pdf", icon: "🏨" },
@@ -118,7 +118,7 @@ export const itinerary = [
       "Gaurav/Amit/Shiva Krishna Ji/ Preeti should finish breakfast and ready to proceed and Reach Supatham Entry by 8.30 am for Kalyana Utsav.",
       "Lakshmikanth/Ranjitha/ Anitha/Pavan Ji/Jyotsna/Sanju Bhowji/Kavita should finish breakfast and ready to proceed and Reach ATC Circle  by 11 am for Virtual Kalyana Utsav.",
       "All Other Members who do not have Darshan on 7th May can take rest Relax or Vist nearby Spots like Varaha Swamy Temple / Sri Vari Padalu/Akash Ganga/ Paap Vinashanam/Shila Thoranam/Japali Theertham . ",
-      "Note : Lunch/Dinner Pls have as per your Convenient time available with you since Darshan Timings are not the same all members and everyone of us will not be available for Lunch and Dinner"
+      "Note : Lunch/Dinner Pls have as per your Convenient time available with you since Darshan Timings are not the same all members and everyone of us together will not be available for Lunch and Dinner"
     ],
     documents: [
       { label: "10 AM — Amit & Gaurav", path: "assets/kalyanam/slot1_group1.pdf", icon: "🎟️" },
