@@ -18,7 +18,8 @@ export const itinerary = [
     ],
     documents: [
       { label: "Train Ticket 1", path: "assets/trains/ticket1.pdf", icon: "🎫" },
-      { label: "Train Ticket 2", path: "assets/trains/ticket2.pdf", icon: "🎫" }
+      { label: "Train Ticket 2", path: "assets/trains/ticket2.pdf", icon: "🎫" },
+      { label: "Train Ticket 3", path: "assets/trains/ticket3.pdf", icon: "🎫" }
     ]
   },
   {
@@ -38,6 +39,7 @@ export const itinerary = [
     documents: [
       { label: "Room 1 Booking", path: "assets/rooms/room1.pdf", icon: "🏨" },
       { label: "Room 2 Booking", path: "assets/rooms/room2.pdf", icon: "🏨" },
+      { label: "Room 3 Booking", path: "assets/rooms/room3.pdf", icon: "🏨" },
       { label: "Darshan Group 1", path: "assets/darshan/group1.pdf", icon: "🎟️" },
       { label: "Darshan Group 2", path: "assets/darshan/group2.pdf", icon: "🎟️" },
       { label: "Darshan Group 3", path: "assets/darshan/group3.pdf", icon: "🎟️" },
@@ -58,12 +60,12 @@ export const itinerary = [
       { time: "01:00 PM", label: "Slot 2 — ATC Circle", detail: "Kalyanotsavam at ATC Circle", icon: "🌺" }
     ],
     documents: [
-      { label: "10 AM — Group 1", path: "assets/kalyanam/slot1_group1.pdf", icon: "🎟️" },
-      { label: "10 AM — Group 2", path: "assets/kalyanam/slot1_group2.pdf", icon: "🎟️" },
-      { label: "1 PM — Group 1", path: "assets/kalyanam/slot2_group1.pdf", icon: "🎟️" },
-      { label: "1 PM — Group 2", path: "assets/kalyanam/slot2_group2.pdf", icon: "🎟️" },
-      { label: "1 PM — Group 3", path: "assets/kalyanam/slot2_group3.pdf", icon: "🎟️" },
-      { label: "1 PM — Group 4", path: "assets/kalyanam/slot2_group4.pdf", icon: "🎟️" }
+      { label: "10 AM — Amit & Gaurav", path: "assets/kalyanam/slot1_group1.pdf", icon: "🎟️" },
+      { label: "10 AM — Shiva & Preeti", path: "assets/kalyanam/slot1_group2.pdf", icon: "🎟️" },
+      { label: "1 PM —  Lakshmikanth & Ranjitha", path: "assets/kalyanam/slot2_group1.pdf", icon: "🎟️" },
+      { label: "1 PM —  Bhavani shankar & Kavita", path: "assets/kalyanam/slot2_group2.pdf", icon: "🎟️" },
+      { label: "1 PM —  Pavan & Jyotsna", path: "assets/kalyanam/slot2_group3.pdf", icon: "🎟️" },
+      { label: "1 PM —  Sridhar & Anita", path: "assets/kalyanam/slot2_group4.pdf", icon: "🎟️" }
     ]
   },
   {
@@ -80,9 +82,9 @@ export const itinerary = [
       { time: "18:45", label: "Return Train", detail: "Tirupati → Kacheguda", icon: "🚆" }
     ],
     documents: [
-      { label: "Padmavathi Ticket 1", path: "assets/padmavati/pad1.pdf", icon: "🎟️" },
-      { label: "Padmavathi Ticket 2", path: "assets/padmavati/pad2.pdf", icon: "🎟️" },
-      { label: "Padmavathi Ticket 3", path: "assets/padmavati/pad3.pdf", icon: "🎟️" },
+      { label: "Padmavathi Ticket 1 (Lakshmikanth, Ranjitha, Anita, Vaibhav, Pranav, Amit)", path: "assets/padmavati/pad1.pdf", icon: "🎟️" },
+      { label: "Padmavathi Ticket 2 (Bhavani shankar, Kavita, Pavan, Jyotsna, Jatin, Kalpana Dubba)", path: "assets/padmavati/pad2.pdf", icon: "🎟️" },
+      { label: "Padmavathi Ticket 3 (Jaganath, Aparna, Shiva krishna, Preeti)", path: "assets/padmavati/pad3.pdf", icon: "🎟️" },
       { label: "Return Ticket 1", path: "assets/trains/return1.pdf", icon: "🎫" },
       { label: "Return Ticket 2", path: "assets/trains/return2.pdf", icon: "🎫" }
     ]
