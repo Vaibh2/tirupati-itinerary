@@ -72,10 +72,10 @@ export const itinerary = [
       { name: "Pranav J Jawalkar",              time: "09:00 PM",   report: "ATC Circle" },
     ],
     plan: [
-      "Arrive Tirupati Station at 6:55 AM, freshen up and proceed to Tirumala CRO Office. Check-in by 9:30 AM.",
-      "Jaganath / Aparna / Kavita / Pavan / Jyotsna / Kalpana: Breakfast & ready by 11:15 AM → ATC Circle by 11:40 AM → Darshan → Return ~5 PM.",
-      "Lakshmikanth / Ranjitha / Gaurav / Vaibhav / Pranav / Jatin: Reach ATC Circle by 6 PM for evening darshan.",
-      "Others: Visit nearby temples (Varaha Swamy, Srivari Padalu, Akash Ganga, Papavinasam, Japali Theertham).",
+      "Arrive Tirupati Station at 6.55 AM fresh n up have Tea/Coffee and will proceed to Tirumala CRO Office and Check In by 9.30 am .",
+      "Jaganath/Aparna Vaini /Sanju Bhowji/Kavita/Pavan Ji/Jyotsna/Kalpana Akka Have Bath/Break fast and get ready by 11.15 and proceed immediate to ATC Circle for Special Darshan Reach by 11.40 am and have darshan and come back to room approx by 5 PM.",
+      "At Evening Lakshmikanth/Ranjitha/Gaurav/Vaibhav/Pranav/Jatin will procedd and reach to ATC Circle by 6 pm to have Special Darshan. ",
+      "All Other Members who do not have Darshan on 6th May can take rest Relax or Vist nearby Temple Spots like Varaha Swamy Temple/ Sri Vari Padalu/Akash Ganga/ Paap Vinashanam/Shila Thoranam/Japali Theertham . ",
       "Note : Lunch/Dinner Pls have as per your Convenient time available with you since Darshan Timings are not the same all members and everyone of us will not be available for Lunch and Dinner"
     ],
     documents: [
@@ -115,9 +115,9 @@ export const itinerary = [
       { name: "Kavita Dounde",                 time: "09:00 PM", report: "ATC Circle" },
     ],
     plan: [
-      "Gaurav / Amit / Shiva / Preeti: Reach Supatham by 8:30 AM for Kalyanotsavam.",
-      "Lakshmikanth / Ranjitha / Anitha / Pavan / Jyotsna / Kavita: Reach ATC Circle by 11 AM for Kalyanotsavam.",
-      "Others: Visit nearby temples or rest.",
+      "Gaurav/Amit/Shiva Krishna Ji/ Preeti should finish breakfast and ready to proceed and Reach Supatham Entry by 8.30 am for Kalyana Utsav.",
+      "Lakshmikanth/Ranjitha/ Anitha/Pavan Ji/Jyotsna/Sanju Bhowji/Kavita should finish breakfast and ready to proceed and Reach ATC Circle  by 11 am for Virtual Kalyana Utsav.",
+      "All Other Members who do not have Darshan on 7th May can take rest Relax or Vist nearby Spots like Varaha Swamy Temple / Sri Vari Padalu/Akash Ganga/ Paap Vinashanam/Shila Thoranam/Japali Theertham . ",
       "Note : Lunch/Dinner Pls have as per your Convenient time available with you since Darshan Timings are not the same all members and everyone of us will not be available for Lunch and Dinner"
     ],
     documents: [
@@ -178,5 +178,29 @@ export const itinerary = [
       { label: "Return Ticket 3", path: "assets/trains/return3.pdf", icon: "🎫" },
       { label: "Return Ticket 4", path: "assets/trains/return4.pdf", icon: "🎫" }
     ]
+  },
+  {
+    id: 5,
+    day: "Day 5",
+    date: "09 May 2026",
+    title: "Return to Hyderabad",
+    icon: "🏠",
+    color: "#1f2937",
+    accentColor: "#6b7280",
+    summary: "Arrival at Kacheguda — Trip Completion",
+
+    events: [
+      {
+        time: "06:20 AM",
+        label: "Arrival at Kacheguda",
+        detail: "Back to Pavillion - Reach Kachiguda at 6.20 am",
+        icon: "🚉"
+      }
+    ],
+
+    plan: [
+      "Back to Pavillion - Reach Kachiguda at 6.20 am and Thanks in Advance for everyone's Co ordination and Co operation"
+    ],
+    documents: []
   }
 ];

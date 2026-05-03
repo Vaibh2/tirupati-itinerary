@@ -424,6 +424,65 @@
   color: #4b5563;               /* soft gray text */
   line-height: 1.5;
 }
+
+/* ---- Music Player ---- */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #2d1554, #7b1c1c);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 30px;
+  padding: 8px 14px 8px 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+ 
+.music-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fdf6e3;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 0;
+}
+ 
+.music-icon { font-size: 16px; }
+.music-label { color: #e8d08a; font-weight: 400; }
+ 
+/* animated bars when playing */
+.music-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+}
+ 
+.music-bars span {
+  display: block;
+  width: 3px;
+  background: #c9a84c;
+  border-radius: 2px;
+  animation: bar-bounce 0.8s ease-in-out infinite alternate;
+}
+ 
+.music-bars span:nth-child(1) { height: 6px;  animation-delay: 0s; }
+.music-bars span:nth-child(2) { height: 12px; animation-delay: 0.15s; }
+.music-bars span:nth-child(3) { height: 8px;  animation-delay: 0.3s; }
+.music-bars span:nth-child(4) { height: 14px; animation-delay: 0.45s; }
+ 
+@keyframes bar-bounce {
+  from { transform: scaleY(0.4); }
+  to   { transform: scaleY(1); }
+}
 /* ---- Footer ---- */
 .footer {
   text-align: center;

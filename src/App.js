@@ -1,6 +1,44 @@
-import { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { itinerary } from './data';
 import './App.css';
+
+function MusicPlayer() {
+  const [playing, setPlaying] = useState(false);
+  const [started, setStarted] = useState(false);
+  const audioRef = useRef(null);
+
+  const toggle = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (playing) {
+      audio.pause();
+      setPlaying(false);
+    } else {
+      audio.play().then(() => setPlaying(true)).catch(() => {});
+      setStarted(true);
+    }
+  };
+
+  return (
+    <div className="music-player" title={playing ? 'Pause music' : 'Play devotional music'}>
+      <audio ref={audioRef} src="assets/music/bgm.mp3" loop preload="none" />
+      <button className="music-btn" onClick={toggle}>
+        {!started ? (
+          <><span className="music-icon">🎵</span><span className="music-label">Play Music</span></>
+        ) : playing ? (
+          <><span className="music-icon">⏸</span><span className="music-label">Pause</span></>
+        ) : (
+          <><span className="music-icon">▶️</span><span className="music-label">Play</span></>
+        )}
+      </button>
+      {playing && (
+        <span className="music-bars">
+          <span /><span /><span /><span />
+        </span>
+      )}
+    </div>
+  );
+}
 
 function Header() {
   const today = new Date();
@@ -40,12 +78,7 @@ function EventTimeline({ events }) {
             <p className="timeline-detail">
               {ev.detail}
               {ev.mapLink && (
-                <a
-                  href={ev.mapLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="map-link"
-                >
+                <a href={ev.mapLink} target="_blank" rel="noopener noreferrer" className="map-link">
                   📍 View Map
                 </a>
               )}
@@ -56,13 +89,12 @@ function EventTimeline({ events }) {
     </div>
   );
 }
+
 function PlanSection({ plan }) {
   if (!plan || !plan.length) return null;
-
   return (
     <div className="plan-section">
       <p className="doc-heading">🧭 Detailed Plan</p>
-
       <ul className="plan-list">
         {plan.map((item, i) => (
           <li key={i}>
@@ -74,6 +106,7 @@ function PlanSection({ plan }) {
     </div>
   );
 }
+
 function DarshanTable({ rows, title }) {
   if (!rows || !rows.length) return null;
   return (
@@ -102,13 +135,12 @@ function DarshanTable({ rows, title }) {
     </div>
   );
 }
+
 function PassengerTable({ rows }) {
   if (!rows || !rows.length) return null;
-
   return (
     <div className="darshan-table-wrap">
       <p className="doc-heading">🚆 Train Passenger Details</p>
-
       <table className="darshan-table">
         <thead>
           <tr>
@@ -120,7 +152,6 @@ function PassengerTable({ rows }) {
             <th>Status</th>
           </tr>
         </thead>
-
         <tbody>
           {rows.map((p, i) => (
             <tr key={i} className={i % 2 === 0 ? 'even' : 'odd'}>
@@ -141,6 +172,7 @@ function PassengerTable({ rows }) {
     </div>
   );
 }
+
 function DocumentList({ documents }) {
   if (!documents.length) return null;
   return (
@@ -154,6 +186,7 @@ function DocumentList({ documents }) {
             target="_blank"
             rel="noopener noreferrer"
             className="doc-card"
+            onClick={e => e.stopPropagation()}
           >
             <span className="doc-icon">{doc.icon}</span>
             <span className="doc-label">{doc.label}</span>
@@ -200,11 +233,11 @@ function DayCard({ day, isActive, onClick }) {
     </div>
   );
 }
+
 function ImportantNotes() {
   return (
     <div className="important-notes">
       <h2>⚠️ Important Notes</h2>
-
       <ul>
         <li>Original Aadhaar Card with Xerox Copy Also</li>
         <li>2 Pearl pet Empty Bottle per Family - To fill and drink Water</li>
@@ -218,13 +251,14 @@ function ImportantNotes() {
     </div>
   );
 }
+
 export default function App() {
   const [activeDay, setActiveDay] = useState(null);
-
   const toggle = (id) => setActiveDay(prev => prev === id ? null : id);
 
   return (
     <div className="app">
+      <MusicPlayer />
       <Header />
       <main className="main">
         <div className="days-container">
@@ -237,7 +271,7 @@ export default function App() {
             />
           ))}
         </div>
-        <ImportantNotes /> 
+        <ImportantNotes />
         <footer className="footer">
           <span>🙏</span> Om Namo Venkatesaya <span>🙏</span>
         </footer>
