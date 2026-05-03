@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tirupati-itinerary/static/css/main.78741c23.css",
-    "main.js": "/tirupati-itinerary/static/js/main.5357bbe5.js",
+    "main.js": "/tirupati-itinerary/static/js/main.c1745647.js",
     "index.html": "/tirupati-itinerary/index.html",
     "main.78741c23.css.map": "/tirupati-itinerary/static/css/main.78741c23.css.map",
-    "main.5357bbe5.js.map": "/tirupati-itinerary/static/js/main.5357bbe5.js.map"
+    "main.c1745647.js.map": "/tirupati-itinerary/static/js/main.c1745647.js.map"
   },
   "entrypoints": [
     "static/css/main.78741c23.css",
-    "static/js/main.5357bbe5.js"
+    "static/js/main.c1745647.js"
   ]
 }
