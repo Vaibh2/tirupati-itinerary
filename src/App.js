@@ -45,6 +45,35 @@ function EventTimeline({ events }) {
   );
 }
 
+function DarshanTable({ rows, title }) {
+  if (!rows || !rows.length) return null;
+  return (
+    <div className="darshan-table-wrap">
+      <p className="doc-heading">{title}</p>
+      <table className="darshan-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Report Time</th>
+            <th>Report At</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r, i) => (
+            <tr key={i} className={i % 2 === 0 ? 'even' : 'odd'}>
+              <td>{i + 1}</td>
+              <td>{r.name}</td>
+              <td><span className="time-badge">{r.time}</span></td>
+              <td>{r.report}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function DocumentList({ documents }) {
   if (!documents.length) return null;
   return (
@@ -91,6 +120,8 @@ function DayCard({ day, isActive, onClick }) {
 
       <div className={`day-expand ${isActive ? 'open' : ''}`}>
         <EventTimeline events={day.events} />
+        <DarshanTable rows={day.darshantable} title="Darshan Timings — 06 May 2026" />
+        <DarshanTable rows={day.kalyanamtable} title="Kalyanotsavam Timings — 07 May 2026" />
         <DocumentList documents={day.documents} />
       </div>
 

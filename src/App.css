@@ -327,6 +327,59 @@
   flex-shrink: 0;
 }
 
+/* ---- Darshan Table ---- */
+.darshan-table-wrap {
+  border-top: 1px solid rgba(201,168,76,.15);
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.darshan-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+
+.darshan-table th {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #6b5b7b;
+  padding: 7px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(201,168,76,.25);
+  white-space: nowrap;
+}
+
+.darshan-table td {
+  padding: 8px 10px;
+  color: #1a0a2e;
+  vertical-align: middle;
+}
+
+.darshan-table tr.even td { background: #fdf6e3; }
+.darshan-table tr.odd td  { background: #fff; }
+
+.darshan-table td:first-child {
+  color: #6b5b7b;
+  font-size: 11px;
+  width: 28px;
+}
+
+.time-badge {
+  display: inline-block;
+  background: rgba(123,28,28,0.08);
+  color: #7b1c1c;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
 /* ---- Footer ---- */
 .footer {
   text-align: center;
