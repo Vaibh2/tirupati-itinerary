@@ -71,6 +71,13 @@ export const itinerary = [
       { name: "Jatin Dounde",                   time: "09:00 PM",   report: "ATC Circle" },
       { name: "Pranav J Jawalkar",              time: "09:00 PM",   report: "ATC Circle" },
     ],
+    plan: [
+      "Arrive Tirupati Station at 6:55 AM, freshen up and proceed to Tirumala CRO Office. Check-in by 9:30 AM.",
+      "Jaganath / Aparna / Kavita / Pavan / Jyotsna / Kalpana: Breakfast & ready by 11:15 AM → ATC Circle by 11:40 AM → Darshan → Return ~5 PM.",
+      "Lakshmikanth / Ranjitha / Gaurav / Vaibhav / Pranav / Jatin: Reach ATC Circle by 6 PM for evening darshan.",
+      "Others: Visit nearby temples (Varaha Swamy, Srivari Padalu, Akash Ganga, Papavinasam, Japali Theertham).",
+      "Note : Lunch/Dinner Pls have as per your Convenient time available with you since Darshan Timings are not the same all members and everyone of us will not be available for Lunch and Dinner"
+    ],
     documents: [
       { label: "Room 1 Booking", path: "assets/rooms/room1.pdf", icon: "🏨" },
       { label: "Room 2 Booking", path: "assets/rooms/room2.pdf", icon: "🏨" },
@@ -106,6 +113,12 @@ export const itinerary = [
       { name: "Jyotsna Dounde",               time: "01:00 PM", report: "ATC Circle" },
       { name: "Bhavani Shankar Dounde",        time: "09:00 PM", report: "ATC Circle" },
       { name: "Kavita Dounde",                 time: "09:00 PM", report: "ATC Circle" },
+    ],
+    plan: [
+      "Gaurav / Amit / Shiva / Preeti: Reach Supatham by 8:30 AM for Kalyanotsavam.",
+      "Lakshmikanth / Ranjitha / Anitha / Pavan / Jyotsna / Kavita: Reach ATC Circle by 11 AM for Kalyanotsavam.",
+      "Others: Visit nearby temples or rest.",
+      "Note : Lunch/Dinner Pls have as per your Convenient time available with you since Darshan Timings are not the same all members and everyone of us will not be available for Lunch and Dinner"
     ],
     documents: [
       { label: "10 AM — Amit & Gaurav", path: "assets/kalyanam/slot1_group1.pdf", icon: "🎟️" },
@@ -147,6 +160,14 @@ export const itinerary = [
       { name: "Kavita Dounde", age: 49, gender: "F", seat: "B4-44 LOWER", status: "CNF" },
       { name: "Jyotsna Dounde", age: 26, gender: "F", seat: "B4-42 MIDDLE", status: "CNF" },
       { name: "Mahenderkar Pavan", age: 30, gender: "M", seat: "B4-45 MIDDLE", status: "CNF" },
+    ],
+    plan: [
+      "Check-out from Tirumala rooms by 7 AM.",
+      "Breakfast → Travel to Padmavathi Temple → Reach by 9:30 AM → Darshan.",
+      "Visit Govindraj Swamy Temple / ISKCON / Kapila Theertham.",
+      "Lunch in Tirupati.",
+      "Reach station by 5:45 PM with packed dinner.",
+      "Train departure at 6:45 PM."
     ],
     documents: [
       { label: "Padmavathi — Lakshmikanth, Ranjitha, Anita, Vaibhav, Pranav, Amit", path: "assets/padmavati/pad1.pdf", icon: "🎟️" },

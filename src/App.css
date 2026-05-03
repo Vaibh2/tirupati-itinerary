@@ -379,7 +379,51 @@
   border-radius: 20px;
   white-space: nowrap;
 }
+.plan-section {
+  margin-top: 20px;
+}
 
+.plan-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.plan-list li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.plan-dot {
+  color: #c9a84c;
+  margin-right: 8px;
+  font-weight: bold;
+}
+.important-notes {
+  margin: 30px 20px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: #fafafa;          /* very light */
+  border: 1px solid #e5e7eb;    /* soft border */
+}
+
+.important-notes h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;               /* neutral dark */
+}
+
+.important-notes ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.important-notes li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #4b5563;               /* soft gray text */
+  line-height: 1.5;
+}
 /* ---- Footer ---- */
 .footer {
   text-align: center;

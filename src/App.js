@@ -56,7 +56,24 @@ function EventTimeline({ events }) {
     </div>
   );
 }
+function PlanSection({ plan }) {
+  if (!plan || !plan.length) return null;
 
+  return (
+    <div className="plan-section">
+      <p className="doc-heading">🧭 Detailed Plan</p>
+
+      <ul className="plan-list">
+        {plan.map((item, i) => (
+          <li key={i}>
+            <span className="plan-dot">•</span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 function DarshanTable({ rows, title }) {
   if (!rows || !rows.length) return null;
   return (
@@ -170,6 +187,7 @@ function DayCard({ day, isActive, onClick }) {
 
       <div className={`day-expand ${isActive ? 'open' : ''}`}>
         <EventTimeline events={day.events} />
+        <PlanSection plan={day.plan} />
         <DarshanTable rows={day.darshantable} title="Darshan Timings — 06 May 2026" />
         <DarshanTable rows={day.kalyanamtable} title="Kalyanotsavam Timings — 07 May 2026" />
         <PassengerTable rows={day.passengertable} />
@@ -182,7 +200,24 @@ function DayCard({ day, isActive, onClick }) {
     </div>
   );
 }
+function ImportantNotes() {
+  return (
+    <div className="important-notes">
+      <h2>⚠️ Important Notes</h2>
 
+      <ul>
+        <li>Original Aadhaar Card with Xerox Copy Also</li>
+        <li>2 Pearl pet Empty Bottle per Family - To fill and drink Water</li>
+        <li>2/3 Bed sheets per Family</li>
+        <li>For All Darshan Dress Code Male - White Pancha/White Shirt/Kurtha</li>
+        <li>For All Darshan Dress Code Female - Pattu Saree/Chudidhar with Dupatta</li>
+        <li>Face Wet wipes / Phone chargers with Recharge / Sunglasses and Cap to Avoid Sunlight/Heat</li>
+        <li>Thick Carry Bags for Carrying Laddus/Shopping Materials Like Bangles/Torans Etc</li>
+        <li>Pls do Not forget your Medicines and take it on time</li>
+      </ul>
+    </div>
+  );
+}
 export default function App() {
   const [activeDay, setActiveDay] = useState(null);
 
@@ -202,6 +237,7 @@ export default function App() {
             />
           ))}
         </div>
+        <ImportantNotes /> 
         <footer className="footer">
           <span>🙏</span> Om Namo Venkatesaya <span>🙏</span>
         </footer>
